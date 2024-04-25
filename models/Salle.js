@@ -1,5 +1,3 @@
-// models/salles.js
-
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/database');
 const Equipement = require('./equipement');
@@ -25,9 +23,12 @@ const Salle = sequelize.define('salles', {
   },
   nbr_places_provisoires: {
     type: DataTypes.INTEGER
-},
+  },
 }, {
-  timestamps: false // Disable timestamps
+  timestamps: false // Désactiver les timestamps
 });
+
+// Définir la relation avec Equipement
+Salle.belongsTo(Equipement, { foreignKey: 'equipement_fk' });
 
 module.exports = Salle;

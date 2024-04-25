@@ -25,4 +25,6 @@ const TypeReunion = sequelize.define('types_reunions', { // Modifier le nom de l
   timestamps: false // Désactive les timestamps
 });
 
+TypeReunion.belongsTo(Equipement, { foreignKey: 'equipement_fk' });
+
 module.exports = TypeReunion;

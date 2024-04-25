@@ -45,5 +45,8 @@ const Reservation = sequelize.define('reservations', {
 }, {
   timestamps: false // Disable timestamps
 });
+Reservation.belongsTo(Salle, { foreignKey: 'salle_fk' });
+Reservation.belongsTo(Creneau, { foreignKey: 'crenau_fk' });
+Reservation.belongsTo(TypeReunion, { foreignKey: 'type_reunion_fk' });
 
 module.exports = Reservation;
