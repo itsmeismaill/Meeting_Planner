@@ -23,7 +23,7 @@ DB_NAME=meeting_planner
 DB_HOST=localhost
 DB_DIALECT=mysql
 ```
-## exécuter l'application
+## Exécuter l'application
 Pour exécuter l'application, vous pouvez utiliser la commande suivante dans votre terminal, à condition d'être dans le répertoire racine de votre projet :
 ```bash
 node app.js
@@ -41,3 +41,25 @@ node app.js
           "message": "Bienvenue sur l'API de l'application Meeting Planner. !"
       }
       ```
+
+### `/api/equipements`
+
+- **GET /** : 
+  - **Description** : endpoint pour récupérer la liste des équipements disponibles.
+  - **Réponse** :
+    - **Corps de la Réponse** : Liste des équipements disponibles au format JSON.
+      ```json
+      [
+         
+          {
+              "id": 1,
+              "equipement": "Ecran"
+          },
+          {
+              "id": 2,
+              "equipement": "Pieuvre"
+          }
+      ]
+      ```
+
+  
