@@ -62,4 +62,38 @@ node app.js
       ]
       ```
 
+### `/api/salles`
+
+- **GET /** : 
+  - **Description** : endpoint pour récupérer la liste des salles disponibles.
+  - **Réponse** :
+    - **Corps de la Réponse** : Liste des salles disponibles au format JSON.
+      ```json
+      [
+          {
+              "id": 1,
+              "name": "E1001",
+              "nbr_places": 23,
+              "equipement_fk": 1,
+              "nbr_places_provisoires": 16,
+              "equipement": {
+                  "id": 1,
+                  "equipement": "Néant"
+              }
+          },
+          {
+              "id": 2,
+              "name": "E1002",
+              "nbr_places": 10,
+              "equipement_fk": 2,
+              "nbr_places_provisoires": 7,
+              "equipement": {
+                  "id": 2,
+                  "equipement": "Ecran"
+              }
+          }
+      ]
+      ```
+
+
   
