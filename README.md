@@ -3,7 +3,7 @@ L'objectif du projet est de cr√©er un utilitaire de gestion des salles simplifi√
 ## Diagramme de classe
 ![DC](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/e1764905-5065-495f-8bca-bd76a3ee8a74)
 
-## Architecture
+## Architecture MVC (sans VIEW)
 ![Architecture](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/0d76f424-73b8-4762-8993-2499c161593e)
 
 
