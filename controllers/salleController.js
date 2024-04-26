@@ -10,8 +10,7 @@ exports.getAllSalles = async (req, res) => {
     const salles = await Salle.findAll({
       include: Equipement, // Inclure la table Equipement dans la requête
     });
-    res.json(salles);
-    console.log(salles);
+    res.status(200).json(salles);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Erreur lors de la récupération des salles." });
@@ -114,7 +113,7 @@ exports.findAvailableSalles = async (req, res) => {
         })
       });
     }
-    res.json(availableSalles);
+    res.status(200).json(availableSalles);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Erreur lors de la recherche des salles disponibles." });

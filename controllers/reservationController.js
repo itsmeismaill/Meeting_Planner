@@ -9,7 +9,7 @@ exports.getAllReservations = async (req, res) => {
     const reservations = await Reservation.findAll({
       include: [Salle, Creneau, TypeReunion],
     });
-    res.json(reservations);
+    res.status(200).json(reservations);
   } catch (error) {
     console.error(error);
     res
@@ -172,7 +172,7 @@ exports.Reserver = async (req, res) => {
       });
     }
 
-    res.json({ availableSalles, unavailableReservations });
+    res.status(200).json({ availableSalles, unavailableReservations });
   } catch (error) {
     console.error(error);
     res

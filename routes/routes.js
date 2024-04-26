@@ -20,4 +20,3 @@ router.post('/reserver', reservationController.Reserver);
 router.get('/reservations', reservationController.getAllReservations);
 
 module.exports = router;
-database\DbShema.sql
