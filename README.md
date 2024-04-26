@@ -180,9 +180,9 @@ Exemple d'input :
 ```
 ### `/api/reserver`
 
-- **Méthode** : POST
-- **Description** : Endpoint pour réserver des salles pour des réunions.
-- **Corps de la Requête** :
+- **POST /** : 
+  - **Description** : Endpoint pour réserver des salles pour des réunions.
+  - **Corps de la Requête** :
     - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
     - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
       Exemple :
