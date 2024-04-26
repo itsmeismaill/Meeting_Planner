@@ -11,4 +11,8 @@ router.get('/salles', salleController.getAllSalles);
 // dans le corps de la requête
 router.post('/available-salles', salleController.findAvailableSalles);
 
+router.post('/reserver', reservationController.Reserver);
+
+router.get('/reservations', reservationController.getAllReservations);
+
 module.exports = router;

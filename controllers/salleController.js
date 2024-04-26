@@ -18,7 +18,8 @@ exports.getAllSalles = async (req, res) => {
   }
 };
 exports.findAvailableSalles = async (req, res) => {
-  const  reservations  = req.body; // Assurez-vous d'envoyer un tableau de réservations dans le corps de la requête
+    const  IsCorona = req.body.IsCorona; // Récupérer les réservations envoyées dans le corps de la requête
+    const reservations = req.body.reservations;
   try {
     const availableSalles = [];
 
@@ -39,14 +40,46 @@ exports.findAvailableSalles = async (req, res) => {
       if (!typeReunion) {
         return res.status(400).json({ message: "Le type de réunion spécifié n'existe pas." });
       }
+      let sallesDisponibles ;
+
 
       // Récupérer les salles disponibles qui répondent aux critères spécifiés
-      const sallesDisponibles = await Salle.findAll({
+      if(IsCorona){
+      if (typeReunion.type ==="RS"){
+       sallesDisponibles = await Salle.findAll({
         where: {
           equipement_fk: typeReunion.equipement_fk,
-          nbr_places_provisoires: { [Op.gte]: nbr_personnes },
+          nbr_places_provisoires: { [Op.gte]: 3 },
         },
       });
+    }
+    else{
+        sallesDisponibles = await Salle.findAll({
+            where: {
+                equipement_fk: typeReunion.equipement_fk,
+                nbr_places_provisoires: { [Op.gte]: nbr_personnes },
+              },
+            });
+        }}
+        else{
+            if (typeReunion.type ==="RS"){
+                sallesDisponibles = await Salle.findAll({
+                 where: {
+                   equipement_fk: typeReunion.equipement_fk,
+                   nbr_places: { [Op.gte]: 3 },
+                 },
+               });
+             }
+             else{
+                 sallesDisponibles = await Salle.findAll({
+                     where: {
+                         equipement_fk: typeReunion.equipement_fk,
+                         nbr_places: { [Op.gte]: nbr_personnes },
+                       },
+                     });
+                 }
+        }
+
 
       // Récupérer les id des salles disponibles
       const salleIds = sallesDisponibles.map((salle) => salle.id);
@@ -55,7 +88,7 @@ exports.findAvailableSalles = async (req, res) => {
       const reservationsExistantes = await Reservation.findAll({
         where: {
           salle_fk: { [Op.in]: salleIds },
-          date_debut,
+          date_debut : date_debut + 'T00:00:00.000Z',
           crenau_fk: creneau.id,
         },
       });
