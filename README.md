@@ -135,8 +135,8 @@ node app.js
 - **POST /** : 
   - **Description** : endpoint pour récupèrer la liste des salles disponibles pour des réservations.
   - **Corps de la Requête** :
-  - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
-  - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
+    - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
+    - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
 
 Exemple d'input :
 
