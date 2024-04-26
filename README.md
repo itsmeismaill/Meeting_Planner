@@ -44,7 +44,7 @@ docker build -t meeting_planner .
 ## Executer l'application en Docker 
 ```bash
 # Run docker image
-$ docker run -p you_port:5000 ema-back
+$ docker run -p you_port:3000 meeting_planner
 ```
 ## Documentation des endpoints de l'API
 
