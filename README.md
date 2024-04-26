@@ -194,22 +194,22 @@ Exemple d'input :
     - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
     - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
 
-- **Exemple d'input** :
-      ```json
+- **Exemple d'entrée** :
+  ```json
+  {
+    "IsCorona": false,
+    "reservations": [
       {
-        "IsCorona": false,
-        "reservations": [
-          {
-            "name": "Réunion 1",
-            "date_debut": "2024-04-30",
-            "creneau_str": "9h-10h",
-            "type_reunion_str": "VC",
-            "nbr_personnes": 8
-          },
-          ...
-        ]
-      }
-     ```
+        "name": "Réunion 1",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 8
+      },
+      ...
+    ]
+  }
+```
 - **Réponse** :
     - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
       ```json
