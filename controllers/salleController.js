@@ -76,12 +76,11 @@ exports.findAvailableSalles = async (req, res) => {
         salles: sallesDisponiblesLibres.map((salle) => {
           return {
             id: salle.id,
-            nom: salle.nom,
+            nom: salle.name,
           };
         })
       });
     }
-
     res.json(availableSalles);
   } catch (error) {
     console.error(error);
