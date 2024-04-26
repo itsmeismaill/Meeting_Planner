@@ -99,7 +99,7 @@ node app.js
 - **GET /** : 
   - **Description** : endpoint pour récupérer la liste des réservations.
   - **Réponse** :
-    - **Corps de la Réponse** : Liste des réservations au format JSON.
+     - **Corps de la Réponse** : Liste des réservations au format JSON.
       ```json
       [
           {
