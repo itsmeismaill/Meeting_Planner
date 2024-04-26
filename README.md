@@ -207,7 +207,8 @@ Exemple d'input :
         "nbr_personnes": 8
       },
     ]
-  }```
+  }
+  ```
 
       
  - **Réponse** :
