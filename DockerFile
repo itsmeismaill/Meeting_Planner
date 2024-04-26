@@ -1,0 +1,20 @@
+# Utiliser une image Node.js comme base
+FROM node:14
+
+# Créer un répertoire de travail pour l'application
+WORKDIR /usr/src/app
+
+# Copier le fichier package.json et package-lock.json pour installer les dépendances
+COPY package*.json ./
+
+# Installer les dépendances
+RUN npm install
+
+# Copier tous les fichiers de l'application dans le répertoire de travail
+COPY . .
+
+# Exposer le port sur lequel l'application va écouter
+EXPOSE 3000
+
+# Commande par défaut pour exécuter l'application
+CMD [ "npm", "start" ]
