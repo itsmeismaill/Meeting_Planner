@@ -197,6 +197,7 @@ Exemple d'input :
       de personnes.
   - **Exemple d'entrée** :
   ```json {
+  {
     "IsCorona": false,
     "reservations": [
       {
@@ -207,6 +208,7 @@ Exemple d'input :
         "nbr_personnes": 8
       },
     ]
+  }
   }
   ```
 
