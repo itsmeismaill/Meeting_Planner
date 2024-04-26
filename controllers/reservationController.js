@@ -88,7 +88,7 @@ exports.Reserver = async (req, res) => {
 
       // Vérifier si des salles sont disponibles initialement
       if (sallesDisponibles.length === 0) {
-        unavailableReservations.push({ name });
+        unavailableReservations.push({ name  ,raison : "il n'existe pas de salles pour ce type de reunion"});
         continue; // Passer à la réservation suivante
       }
 
@@ -115,7 +115,7 @@ exports.Reserver = async (req, res) => {
 
       // Vérifier si des salles sont disponibles après avoir filtré celles déjà réservées
       if (sallesDisponiblesLibres.length === 0) {
-        unavailableReservations.push({ name });
+        unavailableReservations.push({ name , raison : "il existe des salles pour ce type de reunion mais elles sont toutes réservées"});
         continue; // Passer à la réservation suivante
       }
 
@@ -154,7 +154,6 @@ exports.Reserver = async (req, res) => {
             salle_fk: premiereSalleDisponible.id,
             crenau_fk: creneauNettoyage.id,
             type_reunion_fk: typeReunion.id,
-            nbr_personnes: 1, // Supposons que le nettoyage ne nécessite qu'une personne
           });
         }
       }

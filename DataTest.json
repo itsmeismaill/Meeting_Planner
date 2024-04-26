@@ -1,0 +1,146 @@
+{
+    "IsCorona": true,
+    "reservations": [
+      {
+        "name": "Réunion 1",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 8
+      },
+      {
+        "name": "Réunion 2",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 6
+      },
+      {
+        "name": "Réunion 3",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "RC",
+        "nbr_personnes": 4
+      },
+      {
+        "name": "Réunion 4",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "RS",
+        "nbr_personnes": 2
+      },
+      {
+        "name": "Réunion 5",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "SPEC",
+        "nbr_personnes": 9
+      },
+      {
+        "name": "Réunion 6",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "RC",
+        "nbr_personnes": 7
+      },
+      {
+        "name": "Réunion 7",
+        "date_debut": "2024-04-30",
+        "creneau_str": "8h-9h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 9
+      },
+      {
+        "name": "Réunion 8",
+        "date_debut": "2024-04-30",
+        "creneau_str": "8h-9h",
+        "type_reunion_str": "SPEC",
+        "nbr_personnes": 10
+      },
+      {
+        "name": "Réunion 9",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "SPEC",
+        "nbr_personnes": 5
+      },
+      {
+        "name": "Réunion 10",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "RS",
+        "nbr_personnes": 4
+      },
+      {
+        "name": "Réunion 11",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "RC",
+        "nbr_personnes": 8
+      },
+      {
+        "name": "Réunion 12",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 12
+      },
+      {
+        "name": "Réunion 13",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "SPEC",
+        "nbr_personnes": 5
+      },
+      {
+        "name": "Réunion 14",
+        "date_debut": "2024-04-30",
+        "creneau_str": "8h-9h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 3
+      },
+      {
+        "name": "Réunion 15",
+        "date_debut": "2024-04-30",
+        "creneau_str": "8h-9h",
+        "type_reunion_str": "SPEC",
+        "nbr_personnes": 2
+      },
+      {
+        "name": "Réunion 16",
+        "date_debut": "2024-04-30",
+        "creneau_str": "8h-9h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 12
+      },
+      {
+        "name": "Réunion 17",
+        "date_debut": "2024-04-30",
+        "creneau_str": "10h-11h",
+        "type_reunion_str": "VC",
+        "nbr_personnes": 6
+      },
+      {
+        "name": "Réunion 18",
+        "date_debut": "2024-04-30",
+        "creneau_str": "11h-12h",
+        "type_reunion_str": "RS",
+        "nbr_personnes": 2
+      },
+      {
+        "name": "Réunion 19",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "RS",
+        "nbr_personnes": 4
+      },
+      {
+        "name": "Réunion 20",
+        "date_debut": "2024-04-30",
+        "creneau_str": "9h-10h",
+        "type_reunion_str": "RC",
+        "nbr_personnes": 7
+      }
+    ]
+  }
+  
