@@ -4,7 +4,9 @@ L'objectif du projet est de créer un utilitaire de gestion des salles simplifi�
 ## Installation 
 ### Développement
 Pour installer les dépendances du projet, exécutez la commande suivante dans le répertoire racine :
-```bash npm install
+```bash
+ npm install
+```
 
 ## Envirenment Variable :
 Lorsque vous travaillez avec des informations sensibles telles que les identifiants de base de données, il est important de les garder sécurisées. Une façon de le faire est d'utiliser un fichier `.env` pour stocker les variables d'environnement.
@@ -20,4 +22,4 @@ DB_PASSWORD=
 DB_NAME=meeting_planner
 DB_HOST=localhost
 DB_DIALECT=mysql
-
+```
