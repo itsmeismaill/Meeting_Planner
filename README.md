@@ -1,5 +1,11 @@
 ## Description 
 L'objectif du projet est de créer un utilitaire de gestion des salles simplifié pour aider notre client à mieux gérer l'utilisation de ses espaces, en particulier pendant la période de perturbation causée par la pandémie de COVID-19.
+## Diagramme de classe
+![DC](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/e1764905-5065-495f-8bca-bd76a3ee8a74)
+
+## Architecture
+![Architecture](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/0d76f424-73b8-4762-8993-2499c161593e)
+
 
 ## Installation 
 ### Développement
