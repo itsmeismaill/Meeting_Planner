@@ -8,7 +8,7 @@ Pour installer les dépendances du projet, exécutez la commande suivante dans l
  npm install
 ```
 
-## Envirenment Variable :
+## Variables d'environnement :
 Lorsque vous travaillez avec des informations sensibles telles que les identifiants de base de données, il est important de les garder sécurisées. Une façon de le faire est d'utiliser un fichier `.env` pour stocker les variables d'environnement.
 
 ### Étapes pour Configurer un Fichier .env :
@@ -94,6 +94,45 @@ node app.js
           }
       ]
       ```
+      ### `/api/reservations`
+
+- **GET /** : 
+  - **Description** : endpoint pour récupérer la liste des réservations.
+  - **Réponse** :
+    - **Corps de la Réponse** : Liste des réservations au format JSON.
+      ```json
+      [
+          {
+              "id": 53,
+              "name": "Réunion 1",
+              "date_debut": "2024-04-30",
+              "salle_fk": 9,
+              "crenau_fk": 2,
+              "type_reunion_fk": 1,
+              "nbr_personnes": 8,
+              "salle": {
+                  "id": 9,
+                  "name": "E3001",
+                  "nbr_places": 13,
+                  "equipement_fk": 6,
+                  "nbr_places_provisoires": 9
+              },
+              "creneau": {
+                  "id": 2,
+                  "type": "9h-10h",
+                  "heure": 9
+              },
+              "types_reunion": {
+                  "id": 1,
+                  "type": "VC",
+                  "equipement_fk": 6
+              }
+          }
+      ]
+      ```
+
+      
+      
 
 
   
