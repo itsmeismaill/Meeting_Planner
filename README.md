@@ -7,6 +7,8 @@ Pour installer les dépendances du projet, exécutez la commande suivante dans l
 ```bash
  npm install
 ```
+### base de données
+Pour commencer à utiliser la base de données, vous pouvez simplement créer une nouvelle base de données Mysql , et en exécutant le script DbShema.sql situé dans le dossier database , vous pouvez  créer les tables nécessaires et aussi  remplir les données initiales.
 
 ## Variables d'environnement :
 Lorsque vous travaillez avec des informations sensibles telles que les identifiants de base de données, il est important de les garder sécurisées. Une façon de le faire est d'utiliser un fichier `.env` pour stocker les variables d'environnement.
