@@ -210,6 +210,8 @@ Exemple d'input :
     ]
   }
 ```
+
+
 - **Réponse** :
   - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
     ```json
