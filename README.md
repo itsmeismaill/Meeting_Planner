@@ -195,7 +195,6 @@ Exemple d'input :
     - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
 
 - **Exemple d'input** :
-
       ```json
       {
         "IsCorona": false,
@@ -210,7 +209,7 @@ Exemple d'input :
           ...
         ]
       }
-      ```
+     ```
 - **Réponse** :
     - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
       ```json
