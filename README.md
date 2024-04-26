@@ -94,7 +94,7 @@ node app.js
           }
       ]
       ```
-      ### `/api/reservations`
+### `/api/reservations`
 
 - **GET /** : 
   - **Description** : endpoint pour récupérer la liste des réservations.
