@@ -211,33 +211,32 @@ Exemple d'input :
   }
 ```
 - **Réponse** :
-    - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
-      ```json
-      {
-        "availableSalles": [
-          {
-            "name": "Réunion 4",
-            "type_reunion_str": "RS",
-            "nbr_personnes": 2,
-            "salle": {
-              "id": 7,
-              "nom": "E2003"
-            },
-            "etat": "Réservée",
-            "reservation_id": 64
+  - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
+    ```json
+    {
+      "availableSalles": [
+        {
+          "name": "Réunion 4",
+          "type_reunion_str": "RS",
+          "nbr_personnes": 2,
+          "salle": {
+            "id": 7,
+            "nom": "E2003"
           },
-          ...
-        ],
-        "unavailableReservations": [
-          {
-            "name": "Réunion 1",
-            "raison": "il existe des salles pour ce type de réunion mais elles sont toutes réservées"
-          },
-          ...
-        ]
-      }
-      ```
-
+          "etat": "Réservée",
+          "reservation_id": 64
+        },
+        ...
+      ],
+      "unavailableReservations": [
+        {
+          "name": "Réunion 1",
+          "raison": "il existe des salles pour ce type de réunion mais elles sont toutes réservées"
+        },
+        ...
+      ]
+    }
+    ```
 
 
 
