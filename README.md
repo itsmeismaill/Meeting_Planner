@@ -36,6 +36,11 @@ Pour exécuter l'application, vous pouvez utiliser la commande suivante dans vot
 ```bash
 node app.js
 ```
+## Builder votre Docker Image 
+```bash
+docker build -t meeting_planner .
+```
+
 ## Documentation des endpoints de l'API
 
 ### `/api/`
