@@ -130,6 +130,56 @@ node app.js
           }
       ]
       ```
+### `/api/available-salles`
+
+- **POST /** : 
+  - **Description** : endpoint pour récupèrer la liste des salles disponibles pour des réservations.
+  - **Corps de la Requête** :
+  - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
+  - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
+
+Exemple d'input :
+
+```json
+{
+  "IsCorona": true,
+  "reservations": [
+    {
+      "name": "Reunion1",
+      "date_debut": "2024-04-30",
+      "creneau_str": "8h-9h",
+      "type_reunion_str": "RS",
+      "nbr_personnes": 3
+    }
+  ]
+}
+```
+  - **Réponse** :
+    - **Corps de la Réponse** : Liste des salles disponibles au format JSON.
+  ```json
+  [
+    {
+      "type_reunion_str": "RS",
+      "nbr_personnes": 3,
+      "salles": [
+        {
+          "id": 1,
+          "nom": "E1001"
+        },
+        {
+          "id": 7,
+          "nom": "E2003"
+        },
+        {
+          "id": 10,
+          "nom": "E3002"
+        }
+      ]
+    }
+  ]
+```
+
+
 
       
       
