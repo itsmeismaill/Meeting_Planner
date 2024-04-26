@@ -11,15 +11,21 @@ app.use('/api', routes);
 
 // Synchronisation avec la base de données
 sequelize.sync().then(() => {
-    console.log('Base de données synchronisée.');
+    // console.log('Base de données synchronisée.');
 }).catch(err => {
     console.error('Erreur lors de la synchronisation de la base de données :', err);
 });
 
-// Port sur lequel le serveur va écouter
-const PORT = process.env.PORT || 3000;
+// Exportez l'application pour permettre les tests
+module.exports = app;
 
-// Démarrer le serveur
-app.listen(PORT, () => {
-    console.log(`Serveur démarré sur le port ${PORT}`);
-});
+// Si le fichier est le fichier principal, démarrer le serveur
+if (require.main === module) {
+    // Port sur lequel le serveur va écouter
+    const PORT = process.env.PORT || 3000;
+
+    // Démarrer le serveur
+    app.listen(PORT, () => {
+        console.log(`Serveur démarré sur le port ${PORT}`);
+    });
+}
