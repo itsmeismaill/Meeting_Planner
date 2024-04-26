@@ -49,9 +49,9 @@ exports.Reserver = async (req, res) => {
           .json({ message: "Le type de réunion spécifié n'existe pas." });
       }
 
-      let sallesDisponibles;
 
       // Récupérer les salles disponibles qui répondent aux critères spécifiés (en fonction de la pandémie)
+      let sallesDisponibles;
       if (IsCorona) {
         if (typeReunion.type === "RS") {
           sallesDisponibles = await Salle.findAll({
