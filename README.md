@@ -38,9 +38,14 @@ node app.js
 ```
 ## Builder votre Docker Image 
 ```bash
+# build docker image
 docker build -t meeting_planner .
 ```
-
+## Executer l'application en Docker 
+```bash
+# Run docker image
+$ docker run -p you_port:5000 ema-back
+```
 ## Documentation des endpoints de l'API
 
 ### `/api/`
