@@ -207,11 +207,11 @@ Exemple d'input :
         "nbr_personnes": 8
       },
     ]
-  }
-``
+  }```
+
       
  - **Réponse** :
-  - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
+    - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
     ```json
     {
       "availableSalles": [
