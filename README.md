@@ -178,6 +178,57 @@ Exemple d'input :
     }
   ]
 ```
+### `/api/reserver`
+
+- **Méthode** : POST
+- **Description** : Endpoint pour réserver des salles pour des réunions.
+- **Corps de la Requête** :
+    - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
+    - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
+      Exemple :
+      ```json
+      {
+        "IsCorona": false,
+        "reservations": [
+          {
+            "name": "Réunion 1",
+            "date_debut": "2024-04-30",
+            "creneau_str": "9h-10h",
+            "type_reunion_str": "VC",
+            "nbr_personnes": 8
+          },
+          ...
+        ]
+      }
+      ```
+- **Réponse** :
+    - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
+      ```json
+      {
+        "availableSalles": [
+          {
+            "name": "Réunion 4",
+            "type_reunion_str": "RS",
+            "nbr_personnes": 2,
+            "salle": {
+              "id": 7,
+              "nom": "E2003"
+            },
+            "etat": "Réservée",
+            "reservation_id": 64
+          },
+          ...
+        ],
+        "unavailableReservations": [
+          {
+            "name": "Réunion 1",
+            "raison": "il existe des salles pour ce type de réunion mais elles sont toutes réservées"
+          },
+          ...
+        ]
+      }
+      ```
+
 
 
 
