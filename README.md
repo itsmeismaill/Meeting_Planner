@@ -192,11 +192,11 @@ Exemple d'input :
   - **Description** : Endpoint pour réserver des salles pour des réunions.  (vous pouvez tester cet endpoint par le contenu du fichier DataTest.json)
   - **Corps de la Requête** :
     - **IsCorona (booléen)** : Indique si la réservation est liée à la pandémie de COVID-19.
-    - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre de personnes.
-
-- **Exemple d'entrée** :
-  ```json
-  {
+    - **reservations (tableau)** : Un tableau contenant les détails de la réservation, y compris le nom de la réunion, la date de début, l'heure de début, le type de réunion et le nombre 
+      de personnes.
+  - **Exemple d'entrée** :
+  ```
+  json {
     "IsCorona": false,
     "reservations": [
       {
@@ -206,13 +206,11 @@ Exemple d'input :
         "type_reunion_str": "VC",
         "nbr_personnes": 8
       },
-      ...
     ]
   }
-```
-
-
-- **Réponse** :
+``
+      
+ - **Réponse** :
   - **Corps de la Réponse** : Liste des salles disponibles et les réservations impossibles au format JSON.
     ```json
     {
@@ -239,6 +237,10 @@ Exemple d'input :
       ]
     }
     ```
+
+
+
+
 
 
 
