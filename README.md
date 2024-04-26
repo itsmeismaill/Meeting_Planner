@@ -149,7 +149,7 @@ node app.js
 Exemple d'input :
 
 ```json
-{
+{{
   "IsCorona": true,
   "reservations": [
     {
@@ -160,6 +160,7 @@ Exemple d'input :
       "nbr_personnes": 3
     }
   ]
+}
 }
 ```
   - **Réponse** :
