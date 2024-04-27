@@ -46,6 +46,13 @@ docker build -t meeting_planner .
 # Run docker image
 $ docker run -p you_port:3000 meeting_planner
 ```
+## Test
+Pour tester les Controllers executer la commande 
+```bash
+# Test
+$ npm test
+```
+
 ## Documentation des endpoints de l'API
 
 ### `/api/`
