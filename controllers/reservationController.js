@@ -49,7 +49,6 @@ exports.Reserver = async (req, res) => {
           .json({ message: "Le type de réunion spécifié n'existe pas." });
       }
 
-
       // Récupérer les salles disponibles qui répondent aux critères spécifiés (en fonction de la pandémie)
       let sallesDisponibles;
       if (IsCorona) {
@@ -88,7 +87,10 @@ exports.Reserver = async (req, res) => {
 
       // Vérifier si des salles sont disponibles initialement
       if (sallesDisponibles.length === 0) {
-        unavailableReservations.push({ name  ,raison : "il n'existe pas de salles pour ce type de reunion"});
+        unavailableReservations.push({
+          name,
+          raison: "il n'existe pas de salles pour ce type de reunion",
+        });
         continue; // Passer à la réservation suivante
       }
 
@@ -115,7 +117,11 @@ exports.Reserver = async (req, res) => {
 
       // Vérifier si des salles sont disponibles après avoir filtré celles déjà réservées
       if (sallesDisponiblesLibres.length === 0) {
-        unavailableReservations.push({ name , raison : "il existe des salles pour ce type de reunion mais elles sont toutes réservées"});
+        unavailableReservations.push({
+          name,
+          raison:
+            "il existe des salles pour ce type de reunion mais elles sont toutes réservées",
+        });
         continue; // Passer à la réservation suivante
       }
 

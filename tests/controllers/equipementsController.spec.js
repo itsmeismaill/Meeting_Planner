@@ -4,11 +4,15 @@ const app = require('../../app'); // Le fichier principal de votre application
 const Equipement = require('../../models/equipement');
 
 describe('API Equipement', () => {
-  it('should return all equipments in a json format with status code 200', async () => {
+  it('should return all equipments in a json format with status code 200 ', async () => {
     const response = await request(app).get('/api/equipements');
     expect(response.status).toBe(200);
     expect(response.body).toBeInstanceOf(Object);    // Vérifie que la réponse est un json
-    // Ajoutez d'autres vérifications ici en fonction de votre logique métier
+    expect(response.body).not.toEqual({}); // Vérifie que le JSON retourné n'est pas vide
+    response.body.forEach((equipement) => {
+      expect(equipement).toHaveProperty('id');
+      expect(equipement).toHaveProperty('equipement');
+    });
   });
 
   it('should return error message with status code 500 when database error occurs', async () => {
