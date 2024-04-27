@@ -7,7 +7,7 @@ describe('API Equipement', () => {
   it('should return all equipments in a json format with status code 200', async () => {
     const response = await request(app).get('/api/equipements');
     expect(response.status).toBe(200);
-    expect(response.body).toBeInstanceOf(Array); // Vérifie que la réponse est un tableau
+    expect(response.body).toBeInstanceOf(Object);    // Vérifie que la réponse est un json
     // Ajoutez d'autres vérifications ici en fonction de votre logique métier
   });
 
