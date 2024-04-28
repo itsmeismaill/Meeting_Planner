@@ -1,4 +1,4 @@
-![Untitled design (25)](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/1b2efc8d-2058-4594-882b-481de40cc742)
+![Gochi Hand](https://github.com/itsmeismaill/Meeting_Planner/assets/114484969/bf405bdf-841d-41cb-9424-01f198b55226)
 ## Description 
 L'objectif du projet est de créer un utilitaire de gestion des salles simplifié pour aider notre client à mieux gérer l'utilisation de ses espaces, en particulier pendant la période de perturbation causée par la pandémie de COVID-19.
 ## Diagramme de classe
