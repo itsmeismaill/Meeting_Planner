@@ -1,3 +1,11 @@
+</br>
+<div align="center">
+  <h1 style="font-size: 3em; color: black;">
+    <span style="animation: colorChange 1.5s infinite alternate;">M</span>eeting_<span style="animation: colorChange 1.5s infinite alternate;">P</span>lanner
+  </h1>
+</div>
+</br>
+
 ## Description 
 L'objectif du projet est de créer un utilitaire de gestion des salles simplifié pour aider notre client à mieux gérer l'utilisation de ses espaces, en particulier pendant la période de perturbation causée par la pandémie de COVID-19.
 ## Diagramme de classe
